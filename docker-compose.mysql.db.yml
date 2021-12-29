@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  db_mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'a12n_db'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: '12345'
+      MYSQL_ROOT_PASSWORD: '12345'
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+  mysql-workbench:
+    image: lscr.io/linuxserver/mysql-workbench
+    container_name: mysql-workbench
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ./workbench:/config
+    ports:
+      - "3000:3000"
+    restart: unless-stopped

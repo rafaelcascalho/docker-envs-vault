@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  redis:
+    image: redis
+    command: redis-server
+    ports:
+      - "6379:6379"
+
+  redisinsight:
+    image: redislabs/redisinsight:1.9.0
+    network_mode: host
+    depends_on:
+      - redis
+    volumes:
+      - ./redisinsight:/db

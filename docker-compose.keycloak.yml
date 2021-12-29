@@ -1,0 +1,13 @@
+version: '3.0'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: 'keycloak'
+    ports:
+      - 8080:8080
+      - 8443:8443
+      - 9990:9990
+    env_file: .keycloak.env
+    volumes:
+      - ./keycloak:/opt/jboss/keycloak/modules/system/layers/base/com/oracle/jdbc/main/driver
