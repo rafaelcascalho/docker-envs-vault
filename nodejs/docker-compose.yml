@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+  dev:
+    build:
+      context: .
+      target: development
+    container_name: api_dev
+    command: npm run start:dev
+    restart: always
+    ports:
+      - "3333:3333"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  tests:
+    build:
+      context: .
+      target: tests
+    container_name: api_tests
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  prod:
+    build:
+      context: .
+      target: production
+    container_name: api_prod
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
