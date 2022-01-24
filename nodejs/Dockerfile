@@ -1,5 +1,5 @@
 # ------------------------ Common Image Base ------------------------
-FROM node:16.13.1-alpine AS common
+FROM node:16.13.1-alpine3.14 AS common
 
 WORKDIR /usr/src/app
 
@@ -10,11 +10,9 @@ COPY . .
 # ---------------------------- Dev Image ----------------------------
 FROM common AS development
 
-RUN npm install glob rimraf
-
-RUN npm install --silent
-
-RUN npm run build
+RUN npm install glob rimraf && \
+    npm install --silent && \
+    npm run build
 
 # ---------------------------- Test Image ----------------------------
 FROM development AS tests
@@ -24,13 +22,12 @@ ENV NODE_ENV=test
 CMD ["npm", "test"]
 
 # ---------------------------- Prod Image ----------------------------
-FROM node:16.13.1-alpine as production
-
-RUN apk add dumb-init
+FROM node:16.13.1-alpine3.14 as production
 
 ENV NODE_ENV=production
 
-RUN npm install --only=production --silent
+RUN apk add dumb-init --no-cache && \
+    npm install --only=production --silent
 
 COPY --from=development /usr/src/app/dist ./dist
 
