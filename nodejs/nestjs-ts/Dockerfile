@@ -10,7 +10,9 @@ COPY . .
 # ---------------------------- Dev Image ----------------------------
 FROM common AS development
 
-RUN npm install --silent
+RUN npm install glob rimraf && \
+    npm install --silent && \
+    npm run build
 
 # ---------------------------- Prod Image ----------------------------
 FROM node:16.13.1-alpine3.14 as production
