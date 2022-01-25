@@ -14,13 +14,6 @@ RUN npm install glob rimraf && \
     npm install --silent && \
     npm run build
 
-# ---------------------------- Test Image ----------------------------
-FROM development AS tests
-
-ENV NODE_ENV=test
-
-CMD ["npm", "test"]
-
 # ---------------------------- Prod Image ----------------------------
 FROM node:16.13.1-alpine3.14 as production
 

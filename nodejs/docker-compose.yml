@@ -6,6 +6,7 @@ services:
       context: .
       target: development
     container_name: api_dev
+    env_file: .env.dev
     command: npm run start:dev
     restart: always
     ports:
@@ -17,8 +18,10 @@ services:
   tests:
     build:
       context: .
-      target: tests
+      target: development
     container_name: api_tests
+    env_file: .env.test
+    command: npm test
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
@@ -28,6 +31,7 @@ services:
       context: .
       target: production
     container_name: api_prod
+    env_file: .env
     restart: unless-stopped
     ports:
       - "3000:3000"
