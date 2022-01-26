@@ -10,6 +10,10 @@ assignees: rafaelcascalho
 
 A reference to the issue opened to add this docker env to the vault.
 
+## Updated already existing files
+
+- [ ] `README.md`
+
 ## Docker Env files
 
 - [ ] `.dockerignore`
