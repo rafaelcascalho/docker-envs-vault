@@ -49,8 +49,7 @@ Check the list of supported tech stacks right now
 
 1. Copy the files from the folder referencing the tech stack of your project (ex: nodejs)
 
-   - `.dockerignore`
-   - `Dockerfile`
+   - `Dockerfile` (case exists)
    - `docker-compose.*.yml`
 
 2. Now, just run the `docker-compose` command with the expected stage image
