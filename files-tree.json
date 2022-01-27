@@ -1,0 +1,8 @@
+{
+  "tech-stacks": {
+    "nodejs": [
+      "ts",
+      "nestjs"
+    ]
+  }
+}

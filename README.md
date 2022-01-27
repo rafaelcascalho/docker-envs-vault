@@ -38,9 +38,9 @@ To get it up and running fast, just follow the steps below:
 
 Check the list of supported tech stacks right now
 
-- [NodeJs](nodejs/)
+- [Node](nodejs/)
   - [TS](nodejs/ts/)
-  - [NestJs + TS](nodejs/nestjs-ts/)
+  - [Nest](nodejs/nestjs-ts/)
 - [Python](python/#) (comming soon)
 - [React](react/#) (comming soon)
 - [Flutter](flutter/#) (comming soon)
