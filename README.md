@@ -5,7 +5,7 @@ all of its system component(s) easily with a single command: `docker-compose up`
 
 ## Advanced Usage
 
-For certain scenarios such as monorepo cases, where you have multiple Dockerfiles and probably a single docker-compose file, 
+For certain scenarios such as monorepo cases, where you have multiple Dockerfiles and probably a single docker-compose file, for those cases you'd still have some use for the `.dockerignore` files and the Dockerfiles individually, and for the compose you'd have to recreate it in a way to suit up your needs.
 
 ## Prerequisites
 
