@@ -63,9 +63,9 @@ Check the list below of infra components and tools
 
 ### Databases
 
-- [Postgres](infra/docker-compose.postgres.db.yml)
-- [MySQL](infra/docker-compose.mysql.db.yml)
-- [MongoDB](infra/docker-compose.mongo.db.yml)
+- [Postgres](infra/docker-compose.postgres.yml)
+- [MySQL](infra/docker-compose.mysql.yml)
+- [MongoDB](infra/docker-compose.mongo.yml)
 
 ### Cache
 
@@ -73,8 +73,8 @@ Check the list below of infra components and tools
 
 ### Queues
 
-- [Kakfa](infra/docker-compose.kafka.q.yml)
-- [Rabbitmq](infra/docker-compose.rabbitmq.q.yml)
+- [Kakfa](infra/docker-compose.kafka.yml)
+- [Rabbitmq](infra/docker-compose.rabbitmq.yml)
 
 ### Tracing
 
