@@ -1,5 +1,5 @@
 # ------------------------ Common Image Base ------------------------
-FROM node:16.13.1-alpine3.14 AS common
+FROM node:latest AS common
 
 WORKDIR /usr/src/app
 

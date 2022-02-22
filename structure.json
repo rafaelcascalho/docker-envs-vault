@@ -1,0 +1,21 @@
+{
+    "tech-stacks": {
+        "js": [
+            "nodejs",
+            "nestjs",
+            "ts"
+        ]
+    },
+    "tools": [
+        "keycloak"
+    ],
+    "infra": [
+        "jaeguer",
+        "kafka",
+        "mongodb",
+        "mysql",
+        "postgres",
+        "rabbitmq",
+        "redis"
+    ]
+}
